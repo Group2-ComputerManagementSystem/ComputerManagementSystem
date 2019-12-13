@@ -71,9 +71,16 @@
 	<header class="presentation_header">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-2">
-                    <a href="#" class="logo"><img src="images/logo.png" alt="logo"></a>
-                </div>
+                <div style="display: inline-block;width: 100px;font-size: 15px;text-align: center">
+					<a href="#">登录</a>/
+					<a href="#">注册</a>
+				</div>
+				<div style="display: inline-block;width: 20%;height: 53px; text-align: center;padding-top:16px ;margin-left: 450px">
+					<span style="font-size: 17px;font-family: 'STHupo' ">机 房 上 课 安 排 系 统</span>
+				</div>
+				<div style="display: inline-block;width: 200px;font-size: 15px;text-align: center;float: right;margin-top: 16px; ">
+					时间：
+				</div>
             </div>
         </div>
     </header>
