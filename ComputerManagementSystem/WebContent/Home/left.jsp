@@ -74,24 +74,12 @@
             <i class="fa fa-angle-right"></i>
         </div>
         <ul>
-            <li><a href="centertest.jsp" target="mainFrame" class="anchor">功能1</a></li>
-            <li><a href="#" target="mainFrame" class="anchor">功能2</a></li>
-            <li><a href="#" target="mainFrame" class="anchor">功能3</a></li>
-            <li><a href="#" target="mainFrame" class="anchor">功能4</a></li>
-            <li><a href="#" target="mainFrame" class="anchor">功能5</a></li>
-            <li><a href="#" target="mainFrame" class="anchor">功能6</a></li>
-            <li><a href="#" target="mainFrame" class="anchor">功能7</a></li>
-            <li><a href="#" target="mainFrame" class="anchor">功能8</a></li>
-            <li><a href="#" target="mainFrame" class="anchor">功能9</a></li>
-            <li><a href="#" target="mainFrame" class="anchor">功能10</a></li>
-            <li><a href="#" target="mainFrame" class="anchor">功能11</a></li>
-            <li><a href="#" target="mainFrame" class="anchor">功能12</a></li>
-            <li><a href="#" target="mainFrame" class="anchor">功能13</a></li>
-            <li><a href="#" target="mainFrame" class="anchor">功能14</a></li>
-            <li><a href="#" target="mainFrame" class="anchor">功能15</a></li>
-            <li><a href="#" target="mainFrame" class="anchor">功能16</a></li>
-            <li><a href="#" target="mainFrame" class="anchor">功能17</a></li>
-            <li><a href="#" target="mainFrame" class="anchor">功能18</a></li>
+            <li><a href="teacherMsg.jsp" target="mainFrame" class="anchor">个人资料管理</a></li>
+            <li><a href="courseMsg_add.jsp" target="mainFrame" class="anchor">课程信息添加</a></li>
+            <li><a href="courseMsg_search.jsp" target="mainFrame" class="anchor">课程信息查询</a></li>
+            <li><a href="passCourse.jsp" target="mainFrame" class="anchor">排课信息查询</a></li>
+            <li><a href="computerhouseSearch.jsp" target="mainFrame" class="anchor">机房查询与申请</a></li>
+            <li><a href="teacherApplication_manager.jsp" target="mainFrame" class="anchor">我的申请管理</a></li>
         </ul>
     </div>
 	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>

@@ -19,9 +19,13 @@ body,td,th {
     </TR>
     <TR align=middle bgColor=#ffffff>
       <TD width="14%" align="left" valign="bottom" >当前用户：</TD>
-      <TD width="37%"  align="left" valign="bottom" ><font class="t4"><%=request.getSession().getAttribute("username")%></font></TD>
+      <TD width="37%"  align="left" valign="bottom" ><font class="t4">${sessionScope.teacher.teacherName }</font></TD>
       <TD width="9%"  align="left" valign="bottom" >您的权限：</TD>
-      <TD width="40%"  align="left" valign="bottom" ><font class="t4"><%=request.getSession().getAttribute("cx")%></font></TD>
+      <%
+      	if(request.getSession().getAttribute("teacher") != null){
+      		pageContext.setAttribute("juerisdiction", "老师");
+      	} %>
+      <TD width="40%"  align="left" valign="bottom" ><font class="t4">${pageScope.juerisdiction }</font></TD>
     </TR>
     <TR   align=middle bgColor=#ffffff>
       <TD height="38" align="left" valign="bottom"  >当前日期：</TD>

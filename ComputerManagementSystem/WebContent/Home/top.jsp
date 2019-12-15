@@ -1,3 +1,4 @@
+<%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -71,15 +72,16 @@
 	<header class="presentation_header">
         <div class="container-fluid">
             <div class="row">
-                <div style="display: inline-block;width: 100px;font-size: 15px;text-align: center">
-					<a href="#">登录</a>/
-					<a href="#">注册</a>
+                <div style="display: inline-block;width: 150px;font-size: 15px;text-align: center">
+					<img alt="头像图标" src="images/user.jpg">${sessionScope.teacher.teacherName }
+					&nbsp;
+					<a href="${pageContext.request.contextPath }/servlet/signout.action">[注销]</a>					
 				</div>
-				<div style="display: inline-block;width: 20%;height: 53px; text-align: center;padding-top:16px ;margin-left: 450px">
-					<span style="font-size: 17px;font-family: 'STHupo' ">机 房 上 课 安 排 系 统</span>
+				<div style="display: inline-block;width: 20%;height: 53px; text-align: center;padding-top:16px ;margin-left: 350px">
+					<span style="font-size: 17px;font-family: 'STHupo' "><a href="${pageContext.request.contextPath }/Home/center.jsp" target="mainFrame">机 房 上 课 安 排 系 统</a></span>
 				</div>
 				<div style="display: inline-block;width: 200px;font-size: 15px;text-align: center;float: right;margin-top: 16px; ">
-					时间：
+					<img src="images/time.png"/><%=new Date().toLocaleString() %>
 				</div>
             </div>
         </div>

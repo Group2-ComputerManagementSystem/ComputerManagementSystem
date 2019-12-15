@@ -34,7 +34,11 @@
     </head>
 
     <body>
-
+		<script type="text/javascript">
+			if(window != top){
+				top.location.href = location.href;
+			}
+		</script>
         <!-- Top content -->
         <div class="top-content">
         	
@@ -62,14 +66,14 @@
                         		</div>
                             </div>
                             <div class="form-bottom">
-			                    <form role="form" action="" method="post" class="login-form">
+			                    <form role="form" action="${pageContext.request.contextPath}/servlet/login.action" method="post" class="login-form">
 			                    	<div class="form-group">
 			                    		<label class="sr-only" for="form-username">Username</label>
-			                        	<input type="text" name="form-username" placeholder="用户名..." class="form-username form-control" id="form-username">
+			                        	<input type="text" name="userName" placeholder="用户名..." class="form-username form-control" id="form-username">
 			                        </div>
 			                        <div class="form-group">
 			                        	<label class="sr-only" for="form-password">Password</label>
-			                        	<input type="password" name="form-password" placeholder="密码..." class="form-password form-control" id="form-password">
+			                        	<input type="password" name="userPwd" placeholder="密码..." class="form-password form-control" id="form-password">
 			                        </div>
 			                        <button type="submit" class="btn">登录</button>
 			                    </form>
