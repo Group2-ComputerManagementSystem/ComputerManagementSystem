@@ -18,4 +18,11 @@ public interface ITeacherService {
 	 */
 	public Teacher searchTeacher(String teacherName, String teacherPwd);
 
+	/**
+	 * 修改教师数据
+	 * @param teacher
+	 * @return
+	 */
+	public int changeTeacherMsg(Teacher teacher);
+
 }

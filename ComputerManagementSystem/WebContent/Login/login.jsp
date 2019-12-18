@@ -66,7 +66,7 @@
                         		</div>
                             </div>
                             <div class="form-bottom">
-			                    <form role="form" action="${pageContext.request.contextPath}/servlet/login.action" method="post" class="login-form">
+			                    <form role="form" action="${pageContext.request.contextPath}/user/login.action" method="post" class="login-form">
 			                    	<div class="form-group">
 			                    		<label class="sr-only" for="form-username">Username</label>
 			                        	<input type="text" name="userName" placeholder="用户名..." class="form-username form-control" id="form-username">
@@ -84,8 +84,8 @@
                         <div class="col-sm-6 col-sm-offset-3 social-login">
                         	<h3>其他登录方式:</h3>
                         	<div class="social-login-buttons">
-	                        	<a class="btn btn-link-1 btn-link-1-facebook" href="#">
-	                        		<i class="fa fa-facebook"></i> Facebook
+	                        	<a class="btn btn-link-1 btn-link-1-facebook" href="${pageContext.request.contextPath }/Register/register.jsp">
+	                        		注册
 	                        	</a>
 	                        	<a class="btn btn-link-1 btn-link-1-twitter" href="#">
 	                        		<i class="fa fa-twitter"></i> Twitter

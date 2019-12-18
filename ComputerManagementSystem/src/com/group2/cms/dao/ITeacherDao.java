@@ -1,6 +1,7 @@
 package com.group2.cms.dao;
 
 import java.sql.SQLException;
+import java.util.List;
 
 import com.group2.cms.pojo.Teacher;
 
@@ -41,4 +42,17 @@ public interface ITeacherDao {
 	 * @throws SQLException
 	 */
 	public Teacher selectTeacherByNameAndPwd(String teacherName,String teacherPwd) throws SQLException;
+	/**
+	 * 查询所有教师信息
+	 * @return	所有教师集合
+	 * @throws SQLException
+	 */
+	public List<Teacher> selectAllTeacher() throws SQLException;
+	/**
+	 * 根据教师号查询教师
+	 * @param teahcerNo
+	 * @return
+	 * @throws SQLException
+	 */
+	public Teacher selectTeacherByNo(String teahcerNo) throws SQLException;
 }

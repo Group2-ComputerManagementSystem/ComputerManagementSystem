@@ -22,4 +22,16 @@ public class TeacherService implements ITeacherService {
 		return null;
 	}
 
+	@Override
+	public int changeTeacherMsg(Teacher teacher) {
+		ITeacherDao teacherDao = new TeacherDao();
+		try {
+			return teacherDao.updateTeacherById(teacher);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return 0;
+	}
+
 }

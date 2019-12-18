@@ -100,7 +100,7 @@
                         		</div>
                             </div>
                             <div class="form-bottom">
-			                    <form role="form" action="" method="post" class="registration-form">
+			                    <form role="form" action="${pageContext.request.contextPath}/user/register.action" method="post" class="registration-form">
 			                    	<div class="form-group">
 			                    		<label class="sr-only" for="form-first-name">First name</label>
 			                        	<input type="text" name="form-first-name" placeholder="用户名..." class="form-first-name form-control" id="form-first-name">

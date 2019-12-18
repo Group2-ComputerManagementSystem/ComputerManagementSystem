@@ -77,9 +77,9 @@
             <li><a href="teacherMsg.jsp" target="mainFrame" class="anchor">个人资料管理</a></li>
             <li><a href="courseMsg_add.jsp" target="mainFrame" class="anchor">课程信息添加</a></li>
             <li><a href="courseMsg_search.jsp" target="mainFrame" class="anchor">课程信息查询</a></li>
-            <li><a href="passCourse.jsp" target="mainFrame" class="anchor">排课信息查询</a></li>
+            <li><a href="${pageContext.request.contextPath }/servlet/showPassCourse.action" target="mainFrame" class="anchor">排课信息查询</a></li>
             <li><a href="computerhouseSearch.jsp" target="mainFrame" class="anchor">机房查询与申请</a></li>
-            <li><a href="teacherApplication_manager.jsp" target="mainFrame" class="anchor">我的申请管理</a></li>
+            <li><a href="${pageContext.request.contextPath }/servlet/applicationmanager.action" target="mainFrame" class="anchor">我的申请管理</a></li>
         </ul>
     </div>
 	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>

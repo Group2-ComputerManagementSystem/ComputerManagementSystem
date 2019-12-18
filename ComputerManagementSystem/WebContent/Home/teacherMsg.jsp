@@ -10,7 +10,7 @@
   </head>
 
   <body >
-  <form  action="jiaoshixinxi_updt2.jsp?f=f&id="  method="post" name="f1"  onsubmit="return checkform();">
+  <form  action="${pageContext.request.contextPath }/servlet/updateteacher.action"  method="post" name="f1"  onsubmit="return checkform();">
   修改教师信息:
   <br><br>
    <table width="100%" border="1" align="center" cellpadding="3" cellspacing="1" bordercolor="#00FFFF" style="border-collapse:collapse">  

@@ -1,3 +1,4 @@
+<%@page import="com.group2.cms.pojo.Teacher"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!doctype html>
@@ -22,8 +23,10 @@ body,td,th {
       <TD width="37%"  align="left" valign="bottom" ><font class="t4">${sessionScope.teacher.teacherName }</font></TD>
       <TD width="9%"  align="left" valign="bottom" >您的权限：</TD>
       <%
-      	if(request.getSession().getAttribute("teacher") != null){
+      	if(!((Teacher)request.getSession().getAttribute("teacher")).getTeacherName().equals("admin")){
       		pageContext.setAttribute("juerisdiction", "老师");
+      	}else{
+      		pageContext.setAttribute("juerisdiction", "管理员");
       	} %>
       <TD width="40%"  align="left" valign="bottom" ><font class="t4">${pageScope.juerisdiction }</font></TD>
     </TR>

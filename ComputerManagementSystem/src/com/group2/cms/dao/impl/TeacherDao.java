@@ -1,9 +1,11 @@
 package com.group2.cms.dao.impl;
 
 import java.sql.SQLException;
+import java.util.List;
 
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
+import org.apache.commons.dbutils.handlers.BeanListHandler;
 
 import com.group2.cms.dao.ITeacherDao;
 import com.group2.cms.pojo.Teacher;
@@ -44,6 +46,18 @@ public class TeacherDao implements ITeacherDao {
 	public Teacher selectTeacherByNameAndPwd(String teacherName, String teacherPwd) throws SQLException {
 		QueryRunner queryRunner = new QueryRunner(C3P0Util.getDataSource());
 		return queryRunner.query("SELECT * FROM teachermsg WHERE teacherName = ? AND teacherPwd = ?", new BeanHandler<Teacher>(Teacher.class),teacherName,teacherPwd);
+	}
+
+	@Override
+	public List<Teacher> selectAllTeacher() throws SQLException {
+		QueryRunner queryRunner = new QueryRunner(C3P0Util.getDataSource());
+		return queryRunner.query("SELECT * FROM teachermsg", new BeanListHandler<Teacher>(Teacher.class));
+	}
+
+	@Override
+	public Teacher selectTeacherByNo(String teahcerNo) throws SQLException {
+		QueryRunner queryRunner = new QueryRunner(C3P0Util.getDataSource());
+		return queryRunner.query("SELECT * FROM teachermsg WHERE teacherNo = ? ", new BeanHandler<Teacher>(Teacher.class), teahcerNo);
 	}
 
 }

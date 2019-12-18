@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -23,17 +24,19 @@
     <td bgcolor='#CCFFFF' align='center'>回复</td>
     <td width="60" align="center" bgcolor="CCFFFF">操作</td>
   </tr>
+  <c:forEach var="application" items="${requestScope.appList }" varStatus="item">
   <tr>
-    <td align="center"></td>
-    <td align="center"></td>
- 	<td align="center"></td>
- 	<td align="center"></td>
- 	<td align="center"></td>
- 	<td align="center"></td>
- 	<td align="center"></td>
-	<td align='center'></td>
-    <td align="center"><a href="jiaoshishenqing_list2.jsp?scid=" onClick="return confirm('真的要删除？')">删除</a></td>
+    <td align="center">${item.count }</td>
+    <td align="center">${application.computerhouseNo }</td>
+ 	<td align="center">${application.computerhouseName }</td>
+ 	<td align="center">${application.courseNo }</td>
+ 	<td align="center">${application.courseName }</td>
+ 	<td align="center">${application.applicationTime }</td>
+ 	<td align="center">${application.applicationState }</td>
+	<td align='center'>${application.applicationReply }</td>
+    <td align="center"><a href="${pageContext.request.contextPath }/servlet/delApplication.action?applicationId=${application.applicationId}" onClick="return confirm('真的要删除？')">删除</a></td>
   </tr>
+  </c:forEach>
 </table><br>
   </body>
 </html>
